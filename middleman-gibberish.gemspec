@@ -3,11 +3,11 @@
 
 Gem::Specification::new do |spec|
   spec.name = "middleman-gibberish"
-  spec.version = "0.7.0"
+  spec.version = "0.7.0.1"
   spec.platform = Gem::Platform::RUBY
   spec.summary = "middleman-gibberish"
   spec.description = "password protect middleman pages - even on s3"
-  spec.license = "same as ruby's" 
+  spec.license = "same as ruby's"
 
   spec.files =
 ["README.md",
@@ -21,16 +21,16 @@ Gem::Specification::new do |spec|
  "middleman-gibberish.gemspec"]
 
   spec.executables = []
-  
+
   spec.require_path = "lib"
 
   spec.test_files = nil
 
-  
+
     spec.add_dependency(*["middleman", ">= 3.0"])
-  
+
     spec.add_dependency(*["gibberish", ">= 1.3"])
-  
+
 
   spec.extensions.push(*[])
 
