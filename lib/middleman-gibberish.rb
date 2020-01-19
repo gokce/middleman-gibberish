@@ -159,15 +159,15 @@ module ::Middleman
             }
 
             input {
-              margin:0;
-              border:0;
-              padding:0;
-              display:inline-block;
-              vertical-align:middle;
-              white-space:normal;
-              background:none;
-              line-height: 1rem;
-              font-size: 1rem;
+            	margin:0;
+            	border:0;
+            	padding:0;
+            	display:inline-block;
+            	vertical-align:middle;
+            	white-space:normal;
+            	background:none;
+            	line-height: 1rem;
+            	font-size: 1rem;
             }
             .gibberish {
               margin: auto;
@@ -176,17 +176,14 @@ module ::Middleman
             }
 
             .gibberish-instructions {
-              margin-bottom: 1em;
+              margin: 1.5em;
             }
-            .gibberish-password,
-            .gibberish-message
-            {
-
+            .gibberish-message {
+              margin: 1em;
             }
 
             .gibberish-password {
               border: 1px solid #000;
-              height: 16px;
               padding: 10px;
             }
 
@@ -196,14 +193,14 @@ module ::Middleman
             }
             .submit {
               padding: 10px;
-              border: 1px solid #000;
+              border: 2px solid #000;
               background: #000;
               color: #fff;
               cursor: pointer;
             }
             .submit:hover {
               padding: 10px;
-              border: 1px solid #0165fc;
+              border: 2px solid #0165fc;
               background: #0165fc;
               color: #fff;
             }
@@ -228,7 +225,8 @@ module ::Middleman
 
           </div>
         </body>
-        </html>
+      </html>
+
 
 
 
