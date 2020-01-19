@@ -145,51 +145,91 @@ module ::Middleman
 
       template =
         <<-__
-          <html>
-            <head>
-              <style>
-                .gibberish {
-                  margin: auto;
-                  color: #999;
-                  text-align: center;
-                }
+        <html>
+        <head>
+          <style>
+            html, body {
+              margin: 0;
+              padding: 0;
+            }
+            body {
+              font-family: sans-serif;
+              font-size: 16px;
+              line-height: 1rem;
+            }
 
-                .gibberish-instructions,
-                .gibberish-password,
-                .gibberish-message
-                {
-                  margin-bottom: 1em;
-                }
+            input {
+              margin:0;
+              border:0;
+              padding:0;
+              display:inline-block;
+              vertical-align:middle;
+              white-space:normal;
+              background:none;
+              line-height: 1rem;
+              font-size: 1rem;
+            }
+            .gibberish {
+              margin: auto;
+              color: #000;
+              text-align: center;
+            }
 
-                .gibberish-password {
-                  border: 1px solid #ccc;
-                }
+            .gibberish-instructions {
+              margin-bottom: 1em;
+            }
+            .gibberish-password,
+            .gibberish-message
+            {
 
-                .gibberish-message {
-                  margin: auto;
-                  color: #633;
-                }
-              </style>
-            </head>
+            }
 
-            <body style='width:100%;'>
-              <br>
-              <br>
-              <br>
-              <div class='gibberish'>
+            .gibberish-password {
+              border: 1px solid #000;
+              height: 16px;
+              padding: 10px;
+            }
 
-                <div class='gibberish-instructions'>
-                  enter password and press &lt;enter&gt;
-                </div>
+            .gibberish-message {
+              margin: auto;
+              color: #633;
+            }
+            .submit {
+              padding: 10px;
+              border: 1px solid #000;
+              background: #000;
+              color: #fff;
+              cursor: pointer;
+            }
+            .submit:hover {
+              padding: 10px;
+              border: 1px solid #0165fc;
+              background: #0165fc;
+              color: #fff;
+            }
 
-                <input id='gibberish-password' name='gibberish-password' type='password' class='gibberish-password'/>
+          </style>
+        </head>
 
-                <div class='gibberish-message'>
-                </div>
+        <body style='width:100%;'>
+          <br>
+          <br>
+          <br>
+          <div class='gibberish'>
 
-              </div>
-            </body>
-          </html>
+            <div class='gibberish-instructions'>
+              Please enter the password
+            </div>
+
+            <input id='gibberish-password' name='gibberish-password' type='password' class='gibberish-password'/>
+            <input class='submit' type='submit'>
+            <div class='gibberish-message'>
+            </div>
+
+          </div>
+        </body>
+        </html>
+
 
 
           #{ scripts.join("\n") }
