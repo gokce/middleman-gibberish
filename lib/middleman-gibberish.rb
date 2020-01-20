@@ -3,7 +3,7 @@ require 'gibberish'
 
 module ::Middleman
   class Gibberish < Middleman::Extension
-    Version = '0.7.0.1'
+    Version = '0.7.0.2'
 
     def Gibberish.version
       Version
