@@ -3,7 +3,7 @@ require 'gibberish'
 
 module ::Middleman
   class Gibberish < Middleman::Extension
-    Version = '0.7.0.2'
+    Version = '0.7.0.3'
 
     def Gibberish.version
       Version
@@ -253,7 +253,9 @@ module ::Middleman
                 if(_password){
                   try{
                     var decrypted = GibberishAES.dec(encrypted, _password);
+                    document.open();
                     document.write(decrypted);
+                    document.close();
 
                     try{
                       jQuery.cookie(cookie, _password, options);
