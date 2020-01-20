@@ -289,7 +289,7 @@ module ::Middleman
                 if(code==13){
                   var _password = password.val();
                   if(!decrypt(_password)){
-                    message.html("sorry, wrong password - try again.");
+                    message.html("Sorry, wrong password.");
                   }
                 } else {
                   message.html("");
