@@ -218,8 +218,10 @@ module ::Middleman
               Please enter the password
             </div>
 
-            <input id='gibberish-password' name='gibberish-password' type='password' class='gibberish-password'/>
-            <input class='submit' type='submit'>
+            <form id="gibberish-form">
+              <input id='gibberish-password' name='gibberish-password' type='password' class='gibberish-password'/>
+              <input class='submit' type='submit'>
+            </form>
             <div class='gibberish-message'>
             </div>
 
@@ -240,6 +242,7 @@ module ::Middleman
             jQuery(function(){
               var password = jQuery('.gibberish-password');
               var message  = jQuery('.gibberish-message');
+              var form = jQuery('#gibberish-form');
 
               password.focus();
               message.html('');
@@ -268,6 +271,16 @@ module ::Middleman
 
                 return false;
               };
+
+              form.submit(function(e) {
+                e.preventDefault();
+
+                var _password = password.val();
+                if(!decrypt(_password)){
+                  message.html("sorry, wrong password - try again.");
+                }
+                return(false);
+              });
 
               password.keyup(function(e){
                 var code = e.which;
