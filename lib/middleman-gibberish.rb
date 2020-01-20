@@ -174,6 +174,7 @@ module ::Middleman
               margin: auto;
               color: #000;
               text-align: center;
+              display: none;
             }
 
             .gibberish-instructions {
@@ -301,7 +302,10 @@ module ::Middleman
 
 
               var _password = jQuery.cookie(cookie);
-              decrypt(_password);
+              let r = decrypt(_password);
+              if (r == false) {
+                $('.gibberish').css("display", "block");
+              }
             });
           </script>
         __
