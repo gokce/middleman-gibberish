@@ -124,7 +124,8 @@ module ::Middleman
   #
     def script_for(glob, path, encrypted)
       libs = %w( jquery.js jquery.cookie.js gibberish.js )
-      cdn = '//ahoward.github.io/middleman-gibberish/assets/'
+      # cdn = '//ahoward.github.io/middleman-gibberish/assets/'
+      cdn = '/javascripts/lib/'
 
       scripts =
         libs.map do |lib|
