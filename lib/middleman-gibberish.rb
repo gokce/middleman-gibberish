@@ -3,7 +3,7 @@ require 'gibberish'
 
 module ::Middleman
   class Gibberish < Middleman::Extension
-    Version = '0.7.0.3'
+    Version = '0.7.0.4'
 
     def Gibberish.version
       Version
@@ -307,6 +307,8 @@ module ::Middleman
               let r = decrypt(_password);
               if (r == false) {
                 $('.gibberish').css("display", "block");
+                password.focus();
+                message.html('');
               }
             });
           </script>
